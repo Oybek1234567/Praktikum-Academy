@@ -1,16 +1,15 @@
-import Home from "../layout/home/home"
-import Layout from "../layout/layout"
+import AuthRouters from "../app/auth/AuthRouters";
+// import Dashboard from "../app/dashboard/dashboard";
 
 export const Router = [
+    // {
+    //     id: 1,
+    //     path: "/",
+    //     element: <Dashboard />,
+    // },
     {
         id: 1,
-        path: '/',
-        element: <Home />
-    }
-]
-
-export const Layout = {
-    id: 1,
-    path: "/layout",
-    element: <Layout />
-}
+        path: "/signin",
+        element: <AuthRouters />,
+    },
+];

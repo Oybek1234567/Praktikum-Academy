@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AuthRouters = () => {
-  return (
-    <div>
-      gfdl
-    </div>
-  )
-}
+    return <div>fffdfdsfsdfsfsd</div>;
+};
 
-export default AuthRouters
+export default AuthRouters;

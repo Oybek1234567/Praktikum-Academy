@@ -1,10 +1,9 @@
-import Dashboard from "./app/dashboard/dashboard"
-import AuthRouters from "./app/auth/AuthRouters"
-const App = () => {
-  const isLoggedIn = true
-  return (
-    isLoggedIn ? <Dashboard />  : <AuthRouters />
-  )
-}
+import LandingPage from "./layout/home/home";
+import Dashboard from "./app/dashboard/dashboard";
 
-export default App
+const App = () => {
+    const isLoggedIn = false;
+    return <>{isLoggedIn ? <Dashboard /> : <LandingPage />}</>;
+};
+
+export default App;

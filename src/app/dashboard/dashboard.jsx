@@ -1,22 +1,20 @@
 import { Layout, Menu } from "antd";
 import { Content } from "antd/es/layout/layout";
 import Sider from "antd/es/layout/Sider";
-import { Link, Route, Router, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { menu } from "../../constants/menu";
-
+import { Router } from "../../constants/router";
 
 const Dashboard = () => {
-  return (
-    <div>
-          <Layout style={{ width: "100%", height: "120vh" }}>
+    return (
+        <div>
+            <Layout style={{ width: "100%", height: "120vh" }}>
                 <Sider
                     trigger={null}
                     width={"20%"}
                     style={{ backgroundColor: "#166199" }}>
                     <div className='demo-logo-vertical' />
-                    <Link to={"/"}>
-                    
-                    </Link>
+                    <Link to={"/"}></Link>
                     <Menu
                         theme='dark'
                         mode='inline'
@@ -44,12 +42,12 @@ const Dashboard = () => {
                             letterSpacing: "2px",
                             width: "80%",
                             marginLeft: "20px",
-                            marginRight: "20px"
+                            marginRight: "20px",
                         }}
                     />
                 </Sider>
                 <Layout style={{ backgroundColor: "#F6F6F8" }}>
-                        {/* <HeaderPage /> */}
+                    {/* <HeaderPage /> */}
                     <Content
                         style={{
                             marginTop: "100px",
@@ -58,20 +56,21 @@ const Dashboard = () => {
                             background: "#F6F6F8",
                             // borderRadius: borderRadiusLG,
                         }}>
-                        {/* <Routes>
-                            {Router && Router.map((item) => (
-                                <Route
-                                    path={item.path}
-                                    element={item.element}
-                                    key={item.id}
-                                />
-                            ))}
-                        </Routes> */}
+                        <Routes>
+                            {Router &&
+                                Router.map((item) => (
+                                    <Route
+                                        path={item.path}
+                                        element={item.element}
+                                        key={item.id}
+                                    />
+                                ))}
+                        </Routes>
                     </Content>
                 </Layout>
             </Layout>
-    </div>
-  )
-}
+        </div>
+    );
+};
 
-export default Dashboard
+export default Dashboard;

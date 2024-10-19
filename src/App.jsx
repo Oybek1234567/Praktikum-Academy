@@ -1,8 +1,10 @@
+import AppRouters from "./app/AppRouters"
+import AuthRouters from "./app/AuthRouters"
+
 const App = () => {
+  const isLoggeedIn = false
   return (
-    <div>
-      
-    </div>
+    isLoggeedIn ? <AppRouters/> : <AuthRouters />
   )
 }
 

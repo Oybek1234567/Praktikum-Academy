@@ -2,6 +2,8 @@ import React from "react";
 import { Header } from "../../components/header";
 import Homepageimg from "../../images/homepage-1.png";
 import { Button } from "antd";
+import { Kurslar } from "../../components/header";
+import Nimauchunbiz from "../../images/nimauchunbiz.svg";
 
 const LandingPage = () => {
     return (
@@ -66,235 +68,23 @@ const LandingPage = () => {
                 <div className='mb-20'>
                     <div className='text-3xl font-semibold mt-20 '>Kurslar</div>
                     <div className='flex justify-between mt-10'>
-                        <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[168px] rounded-xl'>
-                            <div>
-                                <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
-                                    UX/UI dizayn
-                                </h1>
-                                <p className='font-medium text-sm ml-5 mt-3'>
-                                    Ushbu kursda foydalanuvchi tajribasi va
-                                    interfeysi <br />
-                                    bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-                                </p>
-                                <div className='flex  ml-5 mt-4 gap-10'>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Davomilik
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 oy
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Modullar Soni
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 ta
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Video Darslar
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            64 ta
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[]168px] rounded-xl'>
-                            <div>
-                                <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
-                                    UX/UI dizayn
-                                </h1>
-                                <p className='font-medium text-sm ml-5 mt-3'>
-                                    Ushbu kursda foydalanuvchi tajribasi va
-                                    interfeysi <br />
-                                    bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-                                </p>
-                                <div className='flex  ml-5 mt-4 gap-10'>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Davomilik
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 oy
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Modullar Soni
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 ta
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Video Darslar
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            64 ta
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[168px] rounded-xl'>
-                            <div>
-                                <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
-                                    UX/UI dizayn
-                                </h1>
-                                <p className='font-medium text-sm ml-5 mt-3'>
-                                    Ushbu kursda foydalanuvchi tajribasi va
-                                    interfeysi <br />
-                                    bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-                                </p>
-                                <div className='flex  ml-5 mt-4 gap-10'>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Davomilik
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 oy
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Modullar Soni
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 ta
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Video Darslar
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            64 ta
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Kurslar />
+                        <Kurslar />
+                        <Kurslar />
                     </div>
                     <div className='flex justify-between mt-5'>
-                        <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[168px] rounded-xl'>
-                            <div>
-                                <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
-                                    UX/UI dizayn
-                                </h1>
-                                <p className='font-medium text-sm ml-5 mt-3'>
-                                    Ushbu kursda foydalanuvchi tajribasi va
-                                    interfeysi <br />
-                                    bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-                                </p>
-                                <div className='flex  ml-5 mt-4 gap-10'>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Davomilik
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 oy
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Modullar Soni
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 ta
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Video Darslar
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            64 ta
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[]168px] rounded-xl'>
-                            <div>
-                                <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
-                                    UX/UI dizayn
-                                </h1>
-                                <p className='font-medium text-sm ml-5 mt-3'>
-                                    Ushbu kursda foydalanuvchi tajribasi va
-                                    interfeysi <br />
-                                    bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-                                </p>
-                                <div className='flex  ml-5 mt-4 gap-10'>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Davomilik
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 oy
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Modullar Soni
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 ta
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Video Darslar
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            64 ta
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[168px] rounded-xl'>
-                            <div>
-                                <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
-                                    UX/UI dizayn
-                                </h1>
-                                <p className='font-medium text-sm ml-5 mt-3'>
-                                    Ushbu kursda foydalanuvchi tajribasi va
-                                    interfeysi <br />
-                                    bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-                                </p>
-                                <div className='flex  ml-5 mt-4 gap-10'>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Davomilik
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 oy
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Modullar Soni
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            10 ta
-                                        </h2>
-                                    </div>
-                                    <div>
-                                        <p className='font-medium text-xs opacity-70'>
-                                            Video Darslar
-                                        </p>
-                                        <h2 className='font-medium text-base'>
-                                            64 ta
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
+                        <Kurslar />
+                        <Kurslar />
+                        <Kurslar />
+                    </div>
+                </div>
+
+                <div>
+                    <h1 className='font-semibold text-3xl '>Nima uchun biz</h1>
+
+                    <div className='w-[420px] h-[208px] rounded-3xl shadow-sm bg-[#F5F5F5]'>
+                        <div className='w-12 h-12 rounded-[100px] p-3 bg-black'>
+                            <img src={Nimauchunbiz} alt='img' />
                         </div>
                     </div>
                 </div>

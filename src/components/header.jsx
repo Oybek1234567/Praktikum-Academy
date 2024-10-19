@@ -33,3 +33,42 @@ export function Header() {
         </>
     );
 }
+
+export function Kurslar() {
+    return (
+        <>
+            <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[168px] rounded-xl'>
+                <div>
+                    <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
+                        UX/UI dizayn
+                    </h1>
+                    <p className='font-medium text-sm ml-5 mt-3'>
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{" "}
+                        <br />
+                        bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
+                    </p>
+                    <div className='flex  ml-5 mt-4 gap-10'>
+                        <div>
+                            <p className='font-medium text-xs opacity-70'>
+                                Davomilik
+                            </p>
+                            <h2 className='font-medium text-base'>10 oy</h2>
+                        </div>
+                        <div>
+                            <p className='font-medium text-xs opacity-70'>
+                                Modullar Soni
+                            </p>
+                            <h2 className='font-medium text-base'>10 ta</h2>
+                        </div>
+                        <div>
+                            <p className='font-medium text-xs opacity-70'>
+                                Video Darslar
+                            </p>
+                            <h2 className='font-medium text-base'>64 ta</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}

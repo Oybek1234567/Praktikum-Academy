@@ -3,7 +3,7 @@ import { Header } from "../../components/header";
 import Homepageimg from "../../images/homepage-1.png";
 import { Button } from "antd";
 
-const LandingPage = () => {
+const Kurslar = () => {
     return (
         <>
             <div className='max-w-[1300px] mx-auto'>
@@ -65,4 +65,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default Kurslar;

@@ -67,40 +67,74 @@ const LandingPage = () => {
         setExpandedIndex(expandedIndex === index ? null : index);
     };
 
+    const [currentIndex2, setCurrentIndex2] = useState(0);
+    const totalItems2 = 6; // Umumiy elementlar soni
+
+    // Tugma yordamida oldinga va orqaga o'tish funksiyalari
+    const handlePrev2 = () => {
+        setCurrentIndex2((prev) => (prev > 0 ? prev - 1 : prev));
+    };
+
+    const handleNext2 = () => {
+        setCurrentIndex2((prev) => (prev < totalItems - 1 ? prev + 1 : prev));
+    };
+
+    // Swiping funksiyalari
+    let startX = 0;
+
+    const handleTouchStart = (e) => {
+        startX = e.touches[0].clientX; // Boshlanish nuqtasini belgilash
+    };
+
+    const handleTouchEnd = (e) => {
+        const endX = e.changedTouches[0].clientX; // Tugash nuqtasini belgilash
+        if (startX > endX + 50) {
+            handleNext2(); // O'ngga siljitish
+        } else if (startX < endX - 50) {
+            handlePrev2(); // Chapga siljitish
+        }
+    };
     return (
         <>
-            <div className='max-w-[1300px] mx-auto'>
-                <div>
+            <div className='sm:px-6 lg:px-8'>
+                <div className=''>
                     <Header />
                 </div>
 
-                <div className='flex mt-[120px] justify-between '>
-                    <div>
-                        <h1 className='text-6xl'>
+                <div className='flex flex-col md:flex-row mt-[120px] justify-between max-w-[1300px] mx-auto'>
+                    <div className=' md:text-left mb-8 md:mb-0'>
+                        <h1 className='text-2xl md:text-6xl'>
                             Maqsadlaringiz <br /> uchun
-                            <span className='text-blue-500 ml-3'>
+                            <span className='text-blue-500 ml-0 md:ml-3'>
                                 mukammal <br /> kurslar
                             </span>
                         </h1>
-                        <p className='text-lg mt-5 opacity-70'>
+                        <p className='text-base md:text-lg mt-3 md:mt-5 opacity-70'>
                             Kurslarimiz maqsadlaringizni amalga oshirishga
                             yordam beradi. <br /> Har bir dars mukammal va
                             amaliy tajribalar bilan boyitilgan.
                         </p>
-                        <Button className='bg-black text-white py-5 px-7 mt-5 rounded-xl font-semibold text-base'>
-                            Kurslar
-                        </Button>
-                        <Button className='bg-gray text-black py-5 px-5 ml-4 rounded-xl font-semibold text-basec'>
-                            Bog'lanish
-                        </Button>
+                        <div className='mt-5 flex gap-4'>
+                            <Button className='bg-black text-white py-4 px-6 rounded-xl font-semibold text-base'>
+                                Kurslar
+                            </Button>
+                            <Button className='bg-gray text-black py-4 px-6 rounded-xl font-semibold text-base'>
+                                Bog'lanish
+                            </Button>
+                        </div>
                     </div>
-                    <div>
-                        <img src={Homepageimg} alt='' />
+                    <div className='mt-8 md:mt-0'>
+                        <img
+                            src={Homepageimg}
+                            alt='img'
+                            className='mx-auto md:mx-0'
+                        />
                     </div>
                 </div>
 
-                <div className='flex mt-14 justify-around'>
-                    <div className='text-center'>
+                <div className='flex flex-col md:flex-row mt-14 justify-around max-w-[1300px] mx-auto'>
+                    {/* O'quvchilar soni */}
+                    <div className='text-center mb-4 md:mb-0'>
                         <h1 className='text-sky-600 font-medium text-5xl'>
                             1200+
                         </h1>
@@ -108,8 +142,10 @@ const LandingPage = () => {
                             O'quvchilar soni
                         </p>
                     </div>
-                    <hr className='h-[61px] bg-gray-300 w-[1px] mt-[3px]' />
-                    <div className='text-center'>
+                    <hr className='h-[1px] bg-gray-300 w-full md:h-[61px] md:w-[1px] md:mt-0 md:mx-4' />
+
+                    {/* Ishga joylashgan o'quvchilar */}
+                    <div className='text-center mb-4 md:mb-0'>
                         <h1 className='text-sky-600 font-medium text-5xl'>
                             1200+
                         </h1>
@@ -117,8 +153,10 @@ const LandingPage = () => {
                             Ishga joylashgan o'quvchilar
                         </p>
                     </div>
-                    <hr className='h-[61px] bg-gray-300 w-[1px] mt-[3px]' />
-                    <div>
+                    <hr className='h-[1px] bg-gray-300 w-full md:h-[61px] md:w-[1px] md:mt-0 md:mx-4' />
+
+                    {/* Mentorlar */}
+                    <div className='text-center'>
                         <h1 className='text-sky-600 font-medium text-5xl'>
                             20+
                         </h1>
@@ -126,121 +164,139 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className='mb-20'>
-                    <div className='text-3xl font-semibold mt-20 '>Kurslar</div>
-                    <div className='flex justify-between mt-10'>
-                        <Kurslar />
-                        <Kurslar />
-                        <Kurslar />
+                <div className='mb-20 max-w-[1300px] mx-auto'>
+                    <div className='text-3xl font-semibold mt-20 text-center md:text-left'>
+                        Kurslar
                     </div>
-                    <div className='flex justify-between mt-5'>
-                        <Kurslar />
-                        <Kurslar />
-                        <Kurslar />
+
+                    <div className='flex flex-col md:flex-row justify-between mt-10'>
+                        <div className='mb-4 md:mb-0 w-full md:max-w-[30%]'>
+                            <Kurslar />
+                        </div>
+                        <div className='mb-4 md:mb-0 w-full md:max-w-[30%]'>
+                            <Kurslar />
+                        </div>
+                        <div className='mb-4 md:mb-0 w-full md:max-w-[30%]'>
+                            <Kurslar />
+                        </div>
+                    </div>
+
+                    <div className='flex flex-col md:flex-row justify-between mt-5'>
+                        <div className='mb-4 md:mb-0 w-full md:max-w-[30%]'>
+                            <Kurslar />
+                        </div>
+                        <div className='mb-4 md:mb-0 w-full md:max-w-[30%]'>
+                            <Kurslar />
+                        </div>
+                        <div className='mb-4 md:mb-0 w-full md:max-w-[30%]'>
+                            <Kurslar />
+                        </div>
                     </div>
                 </div>
 
-                <div className='relative w-full'>
+                <div className='relative w-full max-w-[1300px] mx-auto'>
                     <div className='flex justify-between items-center'>
                         <h1 className='font-semibold text-3xl'>
                             Nima uchun biz
                         </h1>
-
-                        {/* Strelkalar */}
-                        <div className='flex items-center gap-2'>
+                        <div className='hidden md:flex items-center gap-2'>
+                            {" "}
+                            {/* Katta ekranlar uchun faqat ko'rsatish */}
                             <button
-                                onClick={handlePrev}
+                                onClick={handlePrev2}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8592; {/* Chap o'q */}
+                                &#8592;
                             </button>
                             <button
-                                onClick={handleNext}
+                                onClick={handleNext2}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8594; {/* O'ng o'q */}
+                                &#8594;
                             </button>
                         </div>
                     </div>
 
-                    {/* Kartalar konteyneri */}
                     <div className='overflow-hidden mt-6'>
                         <div
                             className='flex transition-transform duration-300'
                             style={{
                                 transform: `translateX(-${
-                                    currentIndex * (100 / 3.5)
+                                    currentIndex2 * (100 / 3.5)
                                 }%)`,
-                                width: `${totalItems * (100 / 3.5)}%`,
-                            }}>
-                            {/* Har bir kartaga belgilangan kenglik */}
-                            <div className='min-w-[calc(100%/5)]'>
+                                width: `${totalItems2 * (100 / 3.5)}%`,
+                            }}
+                            onTouchStart={handleTouchStart} // Mobil qurilmada boshlanish
+                            onTouchEnd={handleTouchEnd} // Mobil qurilmada tugash
+                        >
+                            <div className='min-w-[calc(100%/5)] mx-2'>
+                                {" "}
+                                {/* Har bir komponent o'rtasida bo'shliq berish */}
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] '>
+                            <div className='min-w-[calc(100%/5)] mx-2'>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] '>
+                            <div className='min-w-[calc(100%/5)] mx-2'>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] '>
+                            <div className='min-w-[calc(100%/5)] mx-2'>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] '>
+                            <div className='min-w-[calc(100%/5)] mx-2'>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] '>
+                            <div className='min-w-[calc(100%/5)] mx-2'>
                                 <Nimauchun />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className='flex w-full rounded-[32px] mt-[120px] bg-[#1D70B7] justify-between '>
-                    <div className='pt-[57px] pl-[64px]'>
-                        <h1 className='font-medium text-5xl text-white w-[481px] mb-8'>
+                <div className='flex flex-col md:flex-row w-full rounded-[32px] mt-[120px] bg-[#1D70B7] justify-between max-w-[1300px] mx-auto h-[360px] md:h-full'>
+                    <div className='flex flex-col justify-center pt-[20px] md:pt-[57px] pl-[16px] md:pl-[64px]'>
+                        <h1 className='font-medium text-5xl text-white mb-8'>
                             Hayotingizni o‘z qiziqishlaringiz bilan
                             rivojlantiring
                         </h1>
-                        <div>
+                        <div className='flex flex-row md:flex-row mb-5'>
                             <Link to={"/signin"}>
-                                <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl border-none mr-3'>
+                                <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl border-none mr-3 mb-2 md:mb-0'>
                                     Ro`yxatdan o`tish
                                 </Button>
                             </Link>
-
-                            <Button
-                                className='border-none bg-inherit font-semibold text-base p-5
-                            '>
-                                Bog'lanish{" "}
+                            <Button className='border-none bg-inherit font-semibold text-base p-5'>
+                                Bog'lanish
                             </Button>
                         </div>
                     </div>
-                    <div>
-                        <img src={Rectangle} alt='img' />
+                    <div className='flex-grow '>
+                        <img
+                            src={Rectangle}
+                            alt='img'
+                            className='w-full h-full object-cover rounded-[32px]'
+                        />
                     </div>
                 </div>
 
-                <div className='relative w-full mt-[120px]'>
+                <div className='w-full mt-[120px] max-w-[1300px] mx-auto'>
                     <div className='flex justify-between items-center'>
                         <h1 className='font-semibold text-3xl'>
                             O‘quvchilar fikri
                         </h1>
 
-                        {/* Strelkalar */}
                         <div className='flex items-center gap-2'>
                             <button
                                 onClick={handlePrev}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8592; {/* Chap o'q */}
+                                &#8592;
                             </button>
                             <button
                                 onClick={handleNext}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8594; {/* O'ng o'q */}
+                                &#8594;
                             </button>
                         </div>
                     </div>
 
-                    {/* Kartalar konteyneri */}
                     <div className='overflow-hidden mt-6'>
                         <div
                             className='flex transition-transform duration-300'
@@ -250,7 +306,6 @@ const LandingPage = () => {
                                 }%)`,
                                 width: `${totalItems * (100 / 3.5)}%`,
                             }}>
-                            {/* Har bir kartaga belgilangan kenglik */}
                             <div className='min-w-[calc(100%/6.8)]'>
                                 <Teachers />
                             </div>
@@ -270,7 +325,7 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className='mt-[120px]'>
+                <div className='mt-[120px] max-w-[1300px] mx-auto'>
                     <h1 className='font-semibold text-3xl'>Mentorlar</h1>
                     <div className='flex gap-5 mt-10'>
                         <Mentorlar />
@@ -287,7 +342,7 @@ const LandingPage = () => {
                 </div>
 
                 <div className='bg-[#00FFA3] mt-[120px] w-full h-[425px] rounded-xl  '>
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between max-w-[1300px] mx-auto'>
                         <div className='w-[640px] h-[210px] text-[#1D70B7] font-medium text-6xl mt-[107px]'>
                             O‘zingizga kerakli savollarga javob <br />
                             topa olmadingizmi?
@@ -310,7 +365,7 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className='mt-[93px] mb-10 '>
+                <div className='mt-[93px] mb-10 max-w-[1300px] mx-auto'>
                     <h1 className='font-semibold text-3xl '>
                         Tez-tez so'raladigan savollar
                     </h1>
@@ -345,9 +400,9 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className='h-[330px] bg-[#F5F5F5] rounded-[32px] mt-[120px]'>
+                <div className='h-[330px] bg-[#F5F5F5] rounded-[32px] mt-[120px] max-w-[1300px] mx-auto'>
                     <div className='flex justify-between'>
-                        <h1 className='w-[442px] h-[212px] font-medium text-5xl pt-[61px] ml-[78px]'>
+                        <h1 className='w-[442px] h-[212px] font-medium text-5xl pt-[61px] ml-[78px] '>
                             Ma’lumotlaringizni qoldiring, o‘zimiz siz bilan
                             bog‘lanamiz
                         </h1>
@@ -380,8 +435,8 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className="mt-[120px]">
-                    <Footer/>
+                <div className='mt-[120px] max-w-[1300px] mx-auto'>
+                    <Footer />
                 </div>
             </div>
         </>

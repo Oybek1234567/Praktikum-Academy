@@ -1,10 +1,13 @@
-import { Button } from "antd";
-import Praktikum from "../images/Praktikum.svg";
-import { Link } from "react-router-dom";
-import Nimauchunbiz from "../images/nimauchunbiz.svg";
-import Teacher from "../images/teacher.svg";
-import Rectangle1 from "../images/Rectangle1.svg";
-import Mentor from "../images/mentorlar.svg";
+import { Button } from 'antd';
+import { Link } from 'react-router-dom';
+import Nimauchunbiz from '../images/nimauchunbiz.svg';
+import Teacher from '../images/teacher.svg';
+import Rectangle1 from '../images/Rectangle1.svg';
+import Mentor from '../images/mentorlar.svg';
+import Praktikum from '../images/Praktikum.svg'; // Ko'k logo uchun
+import Praktikum2 from '../images/Praktikum2.svg'; // Oq logo uchun
+import Qilinganishlar from '../images/qilinganishlar.svg';
+import Frame from '../images/Frame.svg';
 
 export function Header() {
     return (
@@ -12,6 +15,38 @@ export function Header() {
             <div className='flex justify-between items-center py-4'>
                 <div>
                     <img src={Praktikum} alt='img' />
+                </div>
+                <div className='flex gap-10 items-center'>
+                    <ul className='flex gap-10 text-center font-medium text-base'>
+                        <li>
+                            <a href='#kurslar'>Kurslar</a>
+                        </li>
+                        <li>
+                            <a href='#mentorlar'>Mentorlar</a>
+                        </li>
+                        <li>
+                            <a href='#savollar'>Tez-tez so`raladigan savollar</a>
+                        </li>
+                        <li>
+                            <a href='#bo`glanish'>Bog`lanish</a>
+                        </li>
+                    </ul>
+                    <Link to='/'>
+                        <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl '>
+                            Ro`yxatdan o`tish
+                        </Button>
+                    </Link>
+                </div>
+            </div>
+        </>
+    );
+}
+export function KurslarHeader() {
+    return (
+        <>
+            <div className='flex justify-between items-center py-4'>
+                <div>
+                    <img src={Praktikum2} alt='img' />
                 </div>
                 <div className='flex gap-10 items-center'>
                     <ul className='flex gap-10 text-center font-medium text-base'>
@@ -28,7 +63,7 @@ export function Header() {
                             <a href=''>Bog`lanish</a>
                         </li>
                     </ul>
-                    <Link to={"/signin"}>
+                    <Link to='/'>
                         <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl '>
                             Ro`yxatdan o`tish
                         </Button>
@@ -48,7 +83,7 @@ export function Kurslar() {
                         UX/UI dizayn
                     </h1>
                     <p className='font-medium text-sm ml-5 mt-3'>
-                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{" "}
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{' '}
                         <br />
                         bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
                     </p>
@@ -90,7 +125,26 @@ export function Nimauchun() {
                         UX/UI dizayn
                     </h1>
                     <p className='font-medium text-sm  mt-3'>
-                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{" "}
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{' '}
+                        <br />
+                        bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
+                    </p>
+                </div>
+            </div>
+        </>
+    );
+}
+export function Kursafzalliklari() {
+    return (
+        <>
+            <div className='w-[420px] h-[147px] rounded-3xl shadow-sm bg-[#F5F5F5] p-5'>
+                
+                <div>
+                    <h1 className='text-blue-500 font-medium text-lg '>
+                        UX/UI dizayn
+                    </h1>
+                    <p className='font-medium text-sm  mt-10'>
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{' '}
                         <br />
                         bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
                     </p>
@@ -144,6 +198,25 @@ export function Mentorlar() {
                             Farrux Bozorboyev
                         </div>
                     </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export function QilinganIshlar() {
+    return (
+        <>
+            <div
+                className='w-[640px] h-[359px] rounded-[32px] relative'
+                style={{
+                    backgroundImage: `url(${Qilinganishlar})`,
+                }}>
+                <div className='p-10 flex justify-between py-[46%]'>
+                    <h1 className='text-[#FFF] font-medium text-2xl '>
+                        Mega go
+                    </h1>
+                    <img src={Frame} />
                 </div>
             </div>
         </>

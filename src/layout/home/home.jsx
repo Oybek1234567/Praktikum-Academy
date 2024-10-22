@@ -146,22 +146,20 @@ const LandingPage = () => {
                             Nima uchun biz
                         </h1>
 
-                        {/* Strelkalar */}
-                        <div className='flex items-center gap-2'>
+                         <div className='flex items-center gap-2'>
                             <button
                                 onClick={handlePrev}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8592; {/* Chap o'q */}
+                                &#8592; 
                             </button>
                             <button
                                 onClick={handleNext}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8594; {/* O'ng o'q */}
+                                &#8594; 
                             </button>
                         </div>
                     </div>
 
-                    {/* Kartalar konteyneri */}
                     <div className='overflow-hidden mt-6'>
                         <div
                             className='flex transition-transform duration-300'
@@ -171,7 +169,6 @@ const LandingPage = () => {
                                 }%)`,
                                 width: `${totalItems * (100 / 3.5)}%`,
                             }}>
-                            {/* Har bir kartaga belgilangan kenglik */}
                             <div className='min-w-[calc(100%/5)]'>
                                 <Nimauchun />
                             </div>
@@ -225,22 +222,20 @@ const LandingPage = () => {
                             O‘quvchilar fikri
                         </h1>
 
-                        {/* Strelkalar */}
                         <div className='flex items-center gap-2'>
                             <button
                                 onClick={handlePrev}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8592; {/* Chap o'q */}
+                                &#8592;
                             </button>
                             <button
                                 onClick={handleNext}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8594; {/* O'ng o'q */}
+                                &#8594; 
                             </button>
                         </div>
                     </div>
 
-                    {/* Kartalar konteyneri */}
                     <div className='overflow-hidden mt-6'>
                         <div
                             className='flex transition-transform duration-300'
@@ -250,7 +245,6 @@ const LandingPage = () => {
                                 }%)`,
                                 width: `${totalItems * (100 / 3.5)}%`,
                             }}>
-                            {/* Har bir kartaga belgilangan kenglik */}
                             <div className='min-w-[calc(100%/6.8)]'>
                                 <Teachers />
                             </div>
@@ -383,7 +377,7 @@ const LandingPage = () => {
                 <div className="mt-[120px]">
                     <Footer/>
                 </div>
-            </div>
+            </div> 
         </>
     );
 };

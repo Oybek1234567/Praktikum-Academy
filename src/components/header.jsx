@@ -29,7 +29,7 @@ export function Header() {
                         </li>
                     </ul>
                     <Link to={"/signin"}>
-                        <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl '>
+                        <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl border-none '>
                             Ro`yxatdan o`tish
                         </Button>
                     </Link>

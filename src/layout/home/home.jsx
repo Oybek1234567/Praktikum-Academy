@@ -286,7 +286,7 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className='bg-[#00FFA3] mt-[120px] w-full h-[425px] rounded-xl '>
+                <div className='bg-[#00FFA3] mt-[120px] w-full h-[425px] rounded-xl  '>
                     <div className='flex justify-between'>
                         <div className='w-[640px] h-[210px] text-[#1D70B7] font-medium text-6xl mt-[107px]'>
                             O‘zingizga kerakli savollarga javob <br />

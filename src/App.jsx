@@ -7,7 +7,7 @@ import LandingPage from "./layout/home/home";
 const App = () => {
     // const isLoggeedIn = false
     // return <AppRouters />;
-    return <LandingPage />;
+    return <Kurslar />;
 };
 
 export default App;

@@ -12,7 +12,7 @@ const Dashboard = () => {
                 <Sider
                     trigger={null}
                     width={"20%"}
-                    style={{ backgroundColor: "#166199" }}>
+                    style={{ backgroundColor: "" }}>
                     <div className='demo-logo-vertical' />
                     <Link to={"/"}></Link>
                     <Menu

@@ -6,7 +6,7 @@ export const menu = [
     },
     {
         id: 2,
-        title: "",
+        title: "dfs",
         path: "/settings",
     },
 ];

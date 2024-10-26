@@ -4,8 +4,8 @@ import Nimauchunbiz from '../images/nimauchunbiz.svg';
 import Teacher from '../images/teacher.svg';
 import Rectangle1 from '../images/Rectangle1.svg';
 import Mentor from '../images/mentorlar.svg';
-import Praktikum from '../images/Praktikum.svg'; // Ko'k logo uchun
-import Praktikum2 from '../images/Praktikum2.svg'; // Oq logo uchun
+import Praktikum from '../images/Praktikum.svg'; 
+import Praktikum2 from '../images/Praktikum2.svg'; 
 import Qilinganishlar from '../images/qilinganishlar.svg';
 import Frame from '../images/Frame.svg';
 import { useState } from "react";

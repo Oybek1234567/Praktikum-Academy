@@ -199,52 +199,49 @@ const LandingPage = () => {
                         <h1 className='font-semibold text-3xl'>
                             Nima uchun biz
                         </h1>
-                        <div className='hidden md:flex items-center gap-2'>
-                            {" "}
-                            {/* Katta ekranlar uchun faqat ko'rsatish */}
+
+                        {/* Strelkalar */}
+                        <div className='flex items-center gap-2'>
                             <button
-                                onClick={handlePrev2}
+                                onClick={handlePrev}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8592;
+                                &#8592; {/* Chap o'q */}
                             </button>
                             <button
-                                onClick={handleNext2}
+                                onClick={handleNext}
                                 className='bg-gray-200 rounded-full p-2'>
-                                &#8594;
+                                &#8594; {/* O'ng o'q */}
                             </button>
                         </div>
                     </div>
 
+                    {/* Kartalar konteyneri */}
                     <div className='overflow-hidden mt-6'>
                         <div
                             className='flex transition-transform duration-300'
                             style={{
                                 transform: `translateX(-${
-                                    currentIndex2 * (100 / 3.5)
+                                    currentIndex * (100 / 3.5)
                                 }%)`,
-                                width: `${totalItems2 * (100 / 3.5)}%`,
-                            }}
-                            onTouchStart={handleTouchStart} // Mobil qurilmada boshlanish
-                            onTouchEnd={handleTouchEnd} // Mobil qurilmada tugash
-                        >
-                            <div className='min-w-[calc(100%/5)] mx-2'>
-                                {" "}
-                                {/* Har bir komponent o'rtasida bo'shliq berish */}
+                                width: `${totalItems * (100 / 3.5)}%`,
+                            }}>
+                            {/* Har bir kartaga belgilangan kenglik */}
+                            <div className='min-w-[calc(100%/5)]'>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] mx-2'>
+                            <div className='min-w-[calc(100%/5)] '>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] mx-2'>
+                            <div className='min-w-[calc(100%/5)] '>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] mx-2'>
+                            <div className='min-w-[calc(100%/5)] '>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] mx-2'>
+                            <div className='min-w-[calc(100%/5)] '>
                                 <Nimauchun />
                             </div>
-                            <div className='min-w-[calc(100%/5)] mx-2'>
+                            <div className='min-w-[calc(100%/5)] '>
                                 <Nimauchun />
                             </div>
                         </div>
@@ -284,16 +281,16 @@ const LandingPage = () => {
                         </h1>
 
                         <div className='flex items-center gap-2'>
-                            <button
+                            <Button
                                 onClick={handlePrev}
                                 className='bg-gray-200 rounded-full p-2'>
                                 &#8592;
-                            </button>
-                            <button
+                            </Button>
+                            <Button
                                 onClick={handleNext}
                                 className='bg-gray-200 rounded-full p-2'>
                                 &#8594;
-                            </button>
+                            </Button>
                         </div>
                     </div>
 

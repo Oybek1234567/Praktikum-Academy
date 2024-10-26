@@ -2,6 +2,7 @@
 // import AuthRouters from "./app/AuthRouters";
 // import LandingPage from "./layout/home/home";
 // import Kurslar from "../src/layout/home/hometwo";
+
 import LandingPage from "./layout/home/home";
 
 

@@ -1,10 +1,13 @@
-import { Button } from "antd";
-import Praktikum from "../images/Praktikum.svg";
-import { Link } from "react-router-dom";
-import Nimauchunbiz from "../images/nimauchunbiz.svg";
-import Teacher from "../images/teacher.svg";
-import Rectangle1 from "../images/Rectangle1.svg";
-import Mentor from "../images/mentorlar.svg";
+import { Button } from 'antd';
+import { Link } from 'react-router-dom';
+import Nimauchunbiz from '../images/nimauchunbiz.svg';
+import Teacher from '../images/teacher.svg';
+import Rectangle1 from '../images/Rectangle1.svg';
+import Mentor from '../images/mentorlar.svg';
+import Praktikum from '../images/Praktikum.svg'; // Ko'k logo uchun
+import Praktikum2 from '../images/Praktikum2.svg'; // Oq logo uchun
+import Qilinganishlar from '../images/qilinganishlar.svg';
+import Frame from '../images/Frame.svg';
 import { useState } from "react";
 
 export function Header() {
@@ -20,9 +23,8 @@ export function Header() {
                 <div>
                     <img src={Praktikum} alt='img' />
                 </div>
-
-                <div className='hidden md:flex items-center'>
-                    <ul className='flex gap-4 lg:gap-10 text-center font-medium text-base'>
+                <div className='flex gap-10 items-center'>
+                    <ul className='flex gap-10 text-center font-medium text-base'>
                         <li>
                             <a href=''>Kurslar</a>
                         </li>
@@ -37,7 +39,7 @@ export function Header() {
                         </li>
                     </ul>
                     <Link to={"/signin"}>
-                        <Button className='flex font-semibold text-base bg-green-400 p-4 rounded-xl border-none ml-4'>
+                        <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl border-none '>
                             Ro`yxatdan o`tish
                         </Button>
                     </Link>
@@ -85,55 +87,62 @@ export function Header() {
 
 export function Kurslar() {
     return (
-        <div className='shadow-sm bg-[#F5F5F5] rounded-xl p-4 md:p-5'>
-            <h1 className='text-blue-500 font-medium text-lg text-center md:text-left'>
-                UX/UI dizayn
-            </h1>
-            <p className='font-medium text-sm mt-3 text-center md:text-left'>
-                Ushbu kursda foydalanuvchi tajribasi va interfeysi
-                <br />
-                bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-            </p>
-            <div className='flex flex-row md:flex-row justify-center  md:justify-start mt-4 gap-5'>
-                <div className='text-center md:text-left'>
-                    <p className='font-medium text-xs opacity-70'>Davomilik</p>
-                    <h2 className='font-medium text-base'>10 oy</h2>
-                </div>
-                <div className='text-center md:text-left'>
-                    <p className='font-medium text-xs opacity-70'>
-                        Modullar Soni
+        <>
+            <div className='shadow-sm bg-[#F5F5F5] w-[420px] h-[168px] rounded-xl'>
+                <div>
+                    <h1 className='text-blue-500 font-medium text-lg ml-5 mt-4'>
+                        UX/UI dizayn
+                    </h1>
+                    <p className='font-medium text-sm ml-5 mt-3'>
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{" "}
+                        <br />
+                        bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
                     </p>
-                    <h2 className='font-medium text-base'>10 ta</h2>
-                </div>
-                <div className='text-center md:text-left'>
-                    <p className='font-medium text-xs opacity-70'>
-                        Video Darslar
-                    </p>
-                    <h2 className='font-medium text-base'>64 ta</h2>
+                    <div className='flex  ml-5 mt-4 gap-10'>
+                        <div>
+                            <p className='font-medium text-xs opacity-70'>
+                                Davomilik
+                            </p>
+                            <h2 className='font-medium text-base'>10 oy</h2>
+                        </div>
+                        <div>
+                            <p className='font-medium text-xs opacity-70'>
+                                Modullar Soni
+                            </p>
+                            <h2 className='font-medium text-base'>10 ta</h2>
+                        </div>
+                        <div>
+                            <p className='font-medium text-xs opacity-70'>
+                                Video Darslar
+                            </p>
+                            <h2 className='font-medium text-base'>64 ta</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
 export function Nimauchun() {
     return (
-        <div className='w-full rounded-3xl shadow-sm bg-[#F5F5F5] p-6 flex flex-col items-start mx-2 my-2 transition-transform duration-300 hover:shadow-lg'>
-            {/* Avatar */}
-            <div className='w-12 h-12 rounded-full p-3 bg-[#D2E2F1] flex items-center justify-center mb-4'>
-                <img
-                    src={Nimauchunbiz}
-                    alt='img'
-                    className='w-full h-full object-cover rounded-full'
-                />
+        <>
+            <div className='w-[420px] h-[208px] rounded-3xl shadow-sm bg-[#F5F5F5] p-6'>
+                <div className='w-12 h-12 rounded-[100px] p-3 bg-[#D2E2F1]'>
+                    <img src={Nimauchunbiz} alt='img' />
+                </div>
+                <div>
+                    <h1 className='text-blue-500 font-medium text-lg mt-4'>
+                        UX/UI dizayn
+                    </h1>
+                    <p className='font-medium text-sm  mt-3'>
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{" "}
+                        <br />
+                        bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
+                    </p>
+                </div>
             </div>
-            <h1 className='text-blue-500 font-medium text-lg'>UX/UI dizayn</h1>
-            <p className='font-medium text-sm mt-2 '>
-                Ushbu kursda foydalanuvchi tajribasi va interfeysi
-                <br />
-                bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
-            </p>
-        </div>
+        </>
     );
 }
 
@@ -181,6 +190,25 @@ export function Mentorlar() {
                             Farrux Bozorboyev
                         </div>
                     </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export function QilinganIshlar() {
+    return (
+        <>
+            <div
+                className='w-[640px] h-[359px] rounded-[32px] relative'
+                style={{
+                    backgroundImage: `url(${Qilinganishlar})`,
+                }}>
+                <div className='p-10 flex justify-between py-[46%]'>
+                    <h1 className='text-[#FFF] font-medium text-2xl '>
+                        Mega go
+                    </h1>
+                    <img src={Frame} />
                 </div>
             </div>
         </>

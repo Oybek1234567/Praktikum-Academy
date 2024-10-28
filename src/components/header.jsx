@@ -6,14 +6,21 @@ import Nimauchunbiz from '../images/nimauchunbiz.svg';
 import Teacher from '../images/teacher.svg';
 import Rectangle1 from '../images/Rectangle1.svg';
 import Mentor from '../images/mentorlar.svg';
-import Praktikum from '../images/Praktikum.svg'; // Ko'k logo uchun
-import Praktikum2 from '../images/Praktikum2.svg'; // Oq logo uchun
+import Praktikum from '../images/Praktikum.svg'; 
+import Praktikum2 from '../images/Praktikum2.svg'; 
 import Qilinganishlar from '../images/qilinganishlar.svg';
 import Frame from '../images/Frame.svg';
+import { useState } from "react";
 
 export function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <>
+        <div className='w-full max-w-[1300px] mx-auto '>
             <div className='flex justify-between items-center py-4'>
                 <div>
                     <img src={Praktikum} alt='img' />
@@ -21,6 +28,7 @@ export function Header() {
                 <div className='flex gap-10 items-center'>
                     <ul className='flex gap-10 text-center font-medium text-base'>
                         <li>
+<<<<<<< HEAD
                             <a href='#kurslar'>Kurslar</a>
                         </li>
                         <li>
@@ -73,6 +81,8 @@ export function KurslarHeader() {
                 <div className='hidden md:flex gap-10  items-center'>
                     <ul className='flex gap-10 text-center font-medium text-base'>
                         <li>
+=======
+>>>>>>> 7009b14127f987980cf1fc4de8f140b2b0718291
                             <a href=''>Kurslar</a>
                         </li>
                         <li>
@@ -85,12 +95,26 @@ export function KurslarHeader() {
                             <a href=''>Bog`lanish</a>
                         </li>
                     </ul>
+<<<<<<< HEAD
 
                     <Link to='/'>
                         <Button className='font-semibold text-base bg-green-400  rounded-xl'>
+=======
+                    <Link to={"/signin"}>
+                        <Button className='font-semibold text-base bg-green-400 p-5 rounded-xl border-none '>
+>>>>>>> 7009b14127f987980cf1fc4de8f140b2b0718291
                             Ro`yxatdan o`tish
                         </Button>
                     </Link>
+                </div>
+
+                {/* Mobil menyu tugmasi */}
+                <div className='md:hidden'>
+                    <button
+                        onClick={toggleMenu}
+                        className='text-gray-500 focus:outline-none'>
+                        {isOpen ? "✖" : "☰"}
+                    </button>
                 </div>
             </div>
 
@@ -133,7 +157,7 @@ export function Kurslar() {
                         UX/UI dizayn
                     </h1>
                     <p className='font-medium text-sm ml-5 mt-3'>
-                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{' '}
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{" "}
                         <br />
                         bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
                     </p>
@@ -175,6 +199,7 @@ export function Nimauchun() {
                         UX/UI dizayn
                     </h1>
                     <p className='font-medium text-sm  mt-3'>
+<<<<<<< HEAD
                         Ushbu kursda foydalanuvchi tajribasi va interfeysi{' '}
                         <br />
                         bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
@@ -194,6 +219,9 @@ export function Kursafzalliklari() {
                     </h1>
                     <p className='font-medium text-sm  mt-10'>
                         Ushbu kursda foydalanuvchi tajribasi va interfeysi{' '}
+=======
+                        Ushbu kursda foydalanuvchi tajribasi va interfeysi{" "}
+>>>>>>> 7009b14127f987980cf1fc4de8f140b2b0718291
                         <br />
                         bo‘yicha bilim va ko‘nikmalarga ega bo‘lasiz
                     </p>

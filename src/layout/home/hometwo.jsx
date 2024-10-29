@@ -90,32 +90,32 @@ const Kurslar = () => {
                         <div className='text-white'>
                             <KurslarHeader />
                         </div>
-                        <div className='flex justify-between mt-20 pb-[47px]'>
-                            <div className=''>
+                        <div className='flex flex-col lg:flex-row justify-between mt-20 pb-[47px]'>
+                            {/* Left Side (Text and Course Info) */}
+                            <div className='lg:w-1/2 mb-10 lg:mb-0'>
                                 <div>
-                                    <h1 className='text-6xl text-white'>
+                                    <h1 className='text-4xl lg:text-6xl text-white'>
                                         0 dan boshlanadigan <br />
                                         <span className='text-green-500 mr-2'>
                                             UX/UI dizayn
                                         </span>
                                         kursi
                                     </h1>
-                                    <p className='text-lg mt-5 opacity-70 text-white'>
+                                    <p className='text-sm lg:text-lg mt-5 opacity-70 text-white'>
                                         UX/UI dizayn kursini 0 dan boshlab
-                                        amaliyotlarga asoslangan holda, <br />{' '}
+                                        amaliyotlarga asoslangan holda, <br />
                                         real proektlar bilan o‘rganing
                                     </p>
-
-                                    <Button className='bg-green-400 text-black py-5 px-7 mt-7 mb-[81px] rounded-xl font-semibold text-base border-none'>
+                                    <Button className='bg-green-400 text-black py-4 px-6 lg:py-5 lg:px-7 mt-7 mb-[81px] rounded-xl font-semibold text-sm lg:text-base border-none'>
                                         Kurs haqida
                                     </Button>
                                 </div>
-                                <div className='flex gap-10 '>
+                                <div className='flex flex-col lg:flex-row gap-6 lg:gap-10'>
                                     <div className=''>
                                         <p className='font-medium text-base text-[#D2E2F1]'>
                                             Davomiyligi
                                         </p>
-                                        <h1 className=' font-medium text-3xl text-white'>
+                                        <h1 className='font-medium text-2xl lg:text-3xl text-white'>
                                             10 oy
                                         </h1>
                                     </div>
@@ -123,7 +123,7 @@ const Kurslar = () => {
                                         <p className='font-medium text-base text-[#D2E2F1]'>
                                             Modullar Soni
                                         </p>
-                                        <h1 className=' font-medium text-3xl text-white'>
+                                        <h1 className='font-medium text-2xl lg:text-3xl text-white'>
                                             10 ta
                                         </h1>
                                     </div>
@@ -131,7 +131,7 @@ const Kurslar = () => {
                                         <p className='font-medium text-base text-[#D2E2F1]'>
                                             Video darslar
                                         </p>
-                                        <h1 className=' font-medium text-3xl text-white'>
+                                        <h1 className='font-medium text-2xl lg:text-3xl text-white'>
                                             60 ta
                                         </h1>
                                     </div>
@@ -139,23 +139,24 @@ const Kurslar = () => {
                                         <p className='font-medium text-base text-[#D2E2F1]'>
                                             Haftada
                                         </p>
-                                        <h1 className=' font-medium text-3xl text-white'>
+                                        <h1 className='font-medium text-2xl lg:text-3xl text-white'>
                                             3 kun (2 soatdan)
                                         </h1>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className=''>
-                                <form className='w-[530px] h-[529px]'>
-                                    <div className='bg-white p-8 rounded-[32px] shadow-lg w-full '>
-                                        <h2 className='text-2xl font-bold mb-6'>
+                            {/* Right Side (Form) */}
+                            <div className='w-full lg:w-1/2'>
+                                <form className='w-full lg:w-[530px] h-auto lg:h-[529px]'>
+                                    <div className='bg-white p-8 rounded-[32px] shadow-lg w-full'>
+                                        <h2 className='text-xl lg:text-2xl font-bold mb-6'>
                                             Kursga yozilish
                                         </h2>
                                         <div className='mb-4'>
                                             <input
                                                 type='text'
-                                                className='shadow bg-[#F5F5F5] rounded-2xl w-full py-3 px-4 text-gray-700 '
+                                                className='shadow bg-[#F5F5F5] rounded-2xl w-full py-3 px-4 text-gray-700'
                                                 placeholder='Ism familiya'
                                             />
                                         </div>
@@ -167,7 +168,7 @@ const Kurslar = () => {
                                             />
                                         </div>
                                         <div className='mb-4'>
-                                            <select className='shadow bg-[#F5F5F5] rounded-2xl w-full py-3 px-4 text-gray-700 '>
+                                            <select className='shadow bg-[#F5F5F5] rounded-2xl w-full py-3 px-4 text-gray-700'>
                                                 <option>UX/UI dizayn</option>
                                                 <option>Web dasturlash</option>
                                                 <option>
@@ -175,7 +176,7 @@ const Kurslar = () => {
                                                 </option>
                                             </select>
                                         </div>
-                                        <div className=' mb-10'>
+                                        <div className='mb-10'>
                                             <input
                                                 type='text'
                                                 placeholder='Xabar'
@@ -519,7 +520,7 @@ const Kurslar = () => {
                     </div>
                 </div>
                 <div className='max-w-[1300px] mx-auto'>
-                    <Footer/>
+                    <Footer />
                 </div>
             </div>
         </>

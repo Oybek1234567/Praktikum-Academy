@@ -1,16 +1,11 @@
 import AuthRouters from "../app/auth/AuthRouters";
+import BoshSahifa from "../pages/dashboardpages/boshsahifa";
 import Dashboard from "../pages/home";
-// import Dashboard from "../app/dashboard/dashboard";
 
 export const Router = [
-    // {
-    //     id: 1,
-    //     path: "/",
-    //     element: <Dashboard />,
-    // },
     {
         id: 1,
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashboard />,
     },
     {
@@ -18,5 +13,9 @@ export const Router = [
         path: "/",
         element: <AuthRouters />,
     },
-    
+    {
+        id: 3,
+        path: "boshsahifa",
+        element: <BoshSahifa />,
+    },
 ];

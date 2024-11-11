@@ -1,21 +1,22 @@
-import AuthRouters from "../app/auth/AuthRouters";
+import CalendarPage from "../pages/calendar";
+import Kurslar from "../pages/courses";
 import BoshSahifa from "../pages/dashboardpages/boshsahifa";
-import Dashboard from "../pages/home";
 
-export const Router = [
+export const Router = [    
+    //Dashboard bilan AuthRoutersni olib tashadim
     {
         id: 1,
-        path: "dashboard",
-        element: <Dashboard />,
+        path: "/", // / <- qolib ketibdi
+        element: <BoshSahifa />,
     },
     {
         id: 2,
-        path: "/",
-        element: <AuthRouters />,
+        path: '/kurslar',
+        element: <Kurslar />
     },
     {
         id: 3,
-        path: "boshsahifa",
-        element: <BoshSahifa />,
-    },
+        path: '/dars-jadvali',
+        element: <CalendarPage />
+    }
 ];

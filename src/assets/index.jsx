@@ -85,4 +85,26 @@ export const Icons = {
             />
         </svg>
     ),
+    play: (props) => (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width={96}
+            height={96}
+            fill='none'
+            {...props}>
+            <g clipPath='url(#a)'>
+                <path
+                    fill='#166199'
+                    fillRule='evenodd'
+                    d='M22.154 0A22.105 22.105 0 0 0 0 22.154v51.692A22.105 22.105 0 0 0 22.154 96h51.692A22.105 22.105 0 0 0 96 73.846V22.154A22.105 22.105 0 0 0 73.846 0H22.154Zm12.858 25.846c.438-.016.868.125 1.212.397L62.07 46.55c.937.739.937 2.16 0 2.898-8.614 6.769-17.233 13.533-25.846 20.301-1.214.962-3.002.092-2.993-1.457v-40.6a1.85 1.85 0 0 1 1.781-1.847Z'
+                    clipRule='evenodd'
+                />
+            </g>
+            <defs>
+                <clipPath id='a'>
+                    <path fill='#fff' d='M0 0h96v96H0z' />
+                </clipPath>
+            </defs>
+        </svg>
+    ),
 };

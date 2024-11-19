@@ -1,4 +1,5 @@
 import { Calendar, Badge } from "antd";
+import { Link } from "react-router-dom";
 
 const getListData = (value) => {
     
@@ -149,7 +150,7 @@ const CalendarPage = () => {
             </div>
             <div className=''>
                 <b className='text-[36px] mt-[27px]'>Jarayonda</b>
-                <div className='flex gap-[40px]'>
+                <Link to={'/topics'} className='flex gap-[40px]'>
                     {cardsData.map((card, index) => (
                         <div
                             key={index}
@@ -189,9 +190,9 @@ const CalendarPage = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </Link>
                 <b className='text-[36px] mt-[27px]'>Tugallangan</b>
-                <div className='flex gap-[40px]'>
+                <Link to={"/finished_topics"} className='flex gap-[40px]'>
                     {completedCardsData.map((card, index) => (
                         <div
                             key={index}
@@ -231,7 +232,7 @@ const CalendarPage = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </Link>
             </div>
         </>
     );

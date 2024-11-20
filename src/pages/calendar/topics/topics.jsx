@@ -34,10 +34,26 @@ const TopicsPage = () => {
                         onChange={handleChange}
                         aria-label='lab API tabs example'
                         indicatorColor='primary'>
-                        <Tab label="Ma'lumot" value='1' />
-                        <Tab label='Fayllar' value='2' />
-                        <Tab label='Uyga vazifa' value='3' />
-                        <Tab label='Sinov testi' value='4' />
+                        <Tab
+                            label="Ma'lumot"
+                            value='1'
+                            style={{ textTransform: "capitalize" }}
+                        />
+                        <Tab
+                            label='Fayllar'
+                            value='2'
+                            style={{ textTransform: "capitalize" }}
+                        />
+                        <Tab
+                            label='Uyga vazifa'
+                            value='3'
+                            style={{ textTransform: "capitalize" }}
+                        />
+                        <Tab
+                            label='Sinov testi'
+                            value='4'
+                            style={{ textTransform: "capitalize" }}
+                        />
                     </Tabs>
 
                     <div
@@ -45,9 +61,11 @@ const TopicsPage = () => {
                         hidden={value !== "1"}
                         id='tabpanel-1'
                         aria-labelledby='tab-1'>
-              {value === "1" && <Box sx={{ p: 3 }}>
-                <InfoPage />
-              </Box>}
+                        {value === "1" && (
+                            <Box sx={{ p: 3 }}>
+                                <InfoPage />
+                            </Box>
+                        )}
                     </div>
 
                     <div
@@ -57,7 +75,7 @@ const TopicsPage = () => {
                         aria-labelledby='tab-2'>
                         {value === "2" && (
                             <Box sx={{ p: 3 }}>
-                              <FilesPage />
+                                <FilesPage />
                             </Box>
                         )}
                     </div>
@@ -69,7 +87,7 @@ const TopicsPage = () => {
                         aria-labelledby='tab-3'>
                         {value === "3" && (
                             <Box sx={{ p: 3 }}>
-                               <HomeworkPage />
+                                <HomeworkPage />
                             </Box>
                         )}
                     </div>
@@ -80,7 +98,7 @@ const TopicsPage = () => {
                         aria-labelledby='tab-4'>
                         {value === "4" && (
                             <Box sx={{ p: 3 }}>
-                             <TestPage />
+                                <TestPage />
                             </Box>
                         )}
                     </div>

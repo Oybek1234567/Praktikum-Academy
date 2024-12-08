@@ -16,25 +16,25 @@ export const menu = [
     {
         id: "3",
         title: "Dars jadvali",
-        path: "/dars-jadvali",
+        path: "/timetable",
         icon: <Icons.calendar/>
     },
     {
         id: "4",
         title: "O'qituvchilar",
-        path: "/o'qituvchilar",
+        path: "/teachers",
         icon: <Icons.users />
     },
     {
         id: "5",
         title: "Profil",
-        path: "/profil",
+        path: "/profile",
         icon: <Icons.user />
     },
     {
         id: "6",
         title: "Mening to'lovlarim",
-        path: "/mening-to'lovlarim",
+        path: "/payments",
         icon: <Icons.payments />
     },
 ];

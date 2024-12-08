@@ -4,9 +4,13 @@ import FilesPage from "../pages/calendar/topics/files";
 import HomeworkPage from "../pages/calendar/topics/homework";
 import InfoPage from "../pages/calendar/topics/info";
 import TestPage from "../pages/calendar/topics/test";
+import Exams from "../pages/calendar/topics/test/exams";
+import Options from "../pages/calendar/topics/test/exams/options";
 import TopicsPage from "../pages/calendar/topics/topics";
 import Kurslar from "../pages/courses";
 import BoshSahifa from "../pages/dashboardpages/boshsahifa";
+import Payments from "../pages/payments";
+import PaymentsAll from "../pages/payments/all";
 
 export const Router = [    
     {
@@ -21,7 +25,7 @@ export const Router = [
     },
     {
         id: 3,
-        path: '/dars-jadvali',
+        path: '/timetable',
         element: <CalendarPage />
     },
     {
@@ -53,5 +57,25 @@ export const Router = [
         id: 9,
         path: "/test",
         element: <TestPage />
+    },
+    {
+        id: 10,
+        path: "/exams",
+        element: <Exams />
+    },
+    {
+        id: 11,
+        path: "/options",
+        element: <Options />
+    },
+    {
+        id: 12,
+        path: "/payments",
+        element: <Payments />
+    },
+    {
+        id: 13,
+        path: "/payments/all",
+        element: <PaymentsAll />
     }
 ];

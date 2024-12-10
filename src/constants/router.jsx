@@ -77,5 +77,5 @@ export const Router = [
         id: 13,
         path: "/payments/all",
         element: <PaymentsAll />
-    }
+    },
 ];

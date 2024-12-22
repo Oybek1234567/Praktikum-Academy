@@ -7,6 +7,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
+    "react/no-unescaped-entities": 'off',
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,

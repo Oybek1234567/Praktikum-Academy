@@ -43,5 +43,11 @@ export const menu = [
         title: "Mening to'lovlarim",
         path: "/payments",
         icon: <Icons.payments />,
+        children: {
+            id: 8,
+            title: "Referal",
+            path: "referal",
+            icon: <Icons.payments />,
+        },
     },
 ];

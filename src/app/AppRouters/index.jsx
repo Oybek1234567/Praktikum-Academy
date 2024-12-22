@@ -32,23 +32,44 @@ const AppRouters = () => {
                         />
                     </Link>
                     <Menu
+                        className="mt-20 text-[20px]"
                         mode='inline'
                         defaultSelectedKeys={["1"]}
-                        items={menu.map(({ id, title, path, icon }) => ({
-                            key: id,
-                            label: <Link to={path}>{title}</Link>,
-                            icon: icon,
-                        }))}
-                        style={{
-                            backgroundColor: "inherit",
-                            fontSize: "18px",
-                            letterSpacing: "2px",
-                            width: "95%",
-                            marginTop: "53px",
-                            marginLeft: "10px",
-                            marginRight: "10px",
-                            border: "none",
-                        }}
+                        items={menu.map(
+                            ({ id, title, path, icon, children }) => {
+                                if (children) {
+                                    return {
+                                        key: id,
+                                        label: (
+                                            <Link
+                                                to={path}
+                                                style={{
+                                                    display: "inline-block",
+                                                }}>
+                                                {title}
+                                            </Link>
+                                        ),
+                                        icon: icon,
+                                        children: [
+                                            {
+                                                key: children.id,
+                                                label: (
+                                                    <Link to={children.path}>
+                                                        {children.title}
+                                                    </Link>
+                                                ),
+                                                icon: children.icon,
+                                            },
+                                        ],
+                                    };
+                                }
+                                return {
+                                    key: id,
+                                    label: <Link to={path}>{title}</Link>,
+                                    icon: icon,
+                                };
+                            }
+                        )}
                     />
                 </Sider>
                 <Layout style={{ backgroundColor: "#F6F6F8", height: "100vh" }}>
@@ -107,14 +128,18 @@ const AppRouters = () => {
                             zIndex: 2,
                         }}>
                         <Routes>
-                            {Router &&
-                                Router.map((item) => (
-                                    <Route
-                                        path={item.path}
-                                        element={item.element}
-                                        key={item.id}
-                                    />
-                                ))}
+                            {Router.map(({ path, element, id, children }) => (
+                                <Route path={path} element={element} key={id}>
+                                    {children &&
+                                        children.map((child) => (
+                                            <Route
+                                                path={child.path}
+                                                element={child.element}
+                                                key={child.id}
+                                            />
+                                        ))}
+                                </Route>
+                            ))}
                             <Route
                                 path='/market'
                                 element={
@@ -128,7 +153,7 @@ const AppRouters = () => {
                             />
                             <Route
                                 path='/notification'
-                                element={<Notification liked={likedCards} />} 
+                                element={<Notification liked={likedCards} />}
                             />
                         </Routes>
                     </Content>

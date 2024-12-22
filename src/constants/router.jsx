@@ -11,6 +11,9 @@ import Kurslar from "../pages/courses";
 import BoshSahifa from "../pages/dashboardpages/boshsahifa";
 import Payments from "../pages/payments";
 import PaymentsAll from "../pages/payments/all";
+import Profile from "../pages/profile";
+import Promocode from "../pages/profile/promocode";
+import Referale from "../pages/profile/referale";
 
 export const Router = [    
     {
@@ -78,4 +81,19 @@ export const Router = [
         path: "/payments/all",
         element: <PaymentsAll />
     },
+    {
+        id: 14,
+        path: '/profile',
+        element: <Profile />
+    },
+    {
+        id: 15,
+        path: "/profile/promocode",
+        element: <Promocode />
+    },
+    {
+        id: 16,
+        path: "referal",
+        element: <Referale />
+    }
 ];

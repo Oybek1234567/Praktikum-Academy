@@ -54,8 +54,7 @@ const PaymentsAllTable = () => {
         {
             title: "Amal",
             dataIndex: "action",
-            render: (text, record) => {
-                // Statusga qarab rangni belgilash
+            render: (text, record) => { 
                 let colorClass = "";
                 if (record.status.includes("To’langan")) {
                     colorClass = "text-[#008E76] font-semibold";
